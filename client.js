@@ -10,6 +10,10 @@ const connect = function() {
     port: 50541
   });
   // interpret incoming data as text
+  conn.on('connect', function() {
+    console.log('Successfully connected to game server...')
+  });
+  conn.write('Name: DSB')
   conn.on('close', function() {
     console.log('you ded');
   });
