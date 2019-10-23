@@ -16,11 +16,13 @@ const handleUserInput = function(data, conn) {
     if (data === 's') 
       conn.write("Move: down");  
     if (data === 'd') 
-      conn.write("Move: right");    
+      conn.write("Move: right");
+    if (data === 'y')
+      conn.write("Say: Yo");
+    if (data === 't')
+      conn.write("Say: d-train");     
   };
   
 module.exports = {
 setupInput
 }
-
-//w = down, a = left, s = down, and d = right 
